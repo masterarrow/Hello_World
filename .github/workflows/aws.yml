@@ -1,7 +1,3 @@
-name: Hello AWS
-
-on: [push]
-
 version: 0.0
 os: linux
 files:
