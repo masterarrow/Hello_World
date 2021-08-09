@@ -3,7 +3,7 @@ const http = require('http');
 const port = 3000;
 
 // Magic word :)
-const word = 'AWS';
+const word = 'AWS!';
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
