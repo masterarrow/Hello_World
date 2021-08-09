@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #give permission for everything in the app directory
-sudo chmod -R 777 /home/ec2-user/app
+sudo chmod -R 777 /home/ec2-user/node-app
 
 #navigate into our working directory
-cd /home/ec2-user/app
+cd /home/ec2-user/node-app
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
