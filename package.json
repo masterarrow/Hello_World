@@ -1,0 +1,12 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "Hello world project",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": ["hello", "world"],
+  "author": "",
+  "license": "MIT"
+}
