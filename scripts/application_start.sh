@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #give permission for everything in the app directory
-sudo chmod -R 777 /home/ec2-user/node-app
+sudo chmod -R 777 /home/ec2-user/app
 
 #navigate into our working directory
-cd /home/ec2-user/node-app
+cd /home/ec2-user/app
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
@@ -15,4 +15,4 @@ export NVM_DIR="$HOME/.nvm"
 npm install
 
 #start node app in the background
-node index.js > app.out.log 2> app.err.log < /dev/null &
+node /home/ec2-user/app/index.js > app.out.log 2> app.err.log < /dev/null &
