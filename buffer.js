@@ -11,18 +11,22 @@ class CircleBuffer {
   * Fetch array of items from airtable.com
   * */
   async fetchData() {
-    const res = await axios({
-      method: 'get',
-      url: `https://api.airtable.com/v0/${process.env.APP}/MainTable?view=Grid%20view`,
-      headers: {
-        'Authorization': `Bearer ${process.env.KEY}`,
-      }
-    }).catch((e) => console.log(e));
+    try {
+      const res = await axios({
+        method: 'get',
+        url: `https://api.airtable.com/v0/${process.env.APP}/MainTable?view=Grid%20view`,
+        headers: {
+          'Authorization': `Bearer ${process.env.KEY}`,
+        }
+      });
 
-    const data = res.data.records;
-    this.arrayBuffer = data.map(item => item.fields.title);
+      const data = res.data.records;
+      this.arrayBuffer = data.map(item => item.fields.title);
 
-    this.k = this.arrayBuffer.length - 1;
+      this.k = this.arrayBuffer.length - 1;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   /*
