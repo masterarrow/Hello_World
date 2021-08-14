@@ -4,7 +4,7 @@ const getData = require('./buffer.js');
 const port = 3000;
 const count = 3;
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   
