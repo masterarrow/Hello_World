@@ -58,4 +58,3 @@ class CircleBuffer {
 const buffer = new CircleBuffer();
 
 module.exports = async (count) => await buffer.getData(count);
-
